@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ExpenseForm.css';
 
-export default function ExpenseForm(){
+export default function ExpenseForm(props){
     // Approach having three different state change
     const [enteredTitle, setTitle] = useState('');
     const [enteredAmt, setAmt] = useState('');
@@ -50,6 +50,7 @@ export default function ExpenseForm(){
             date: new Date(enteredDate)
         };
 
+        props.onSaveExpense(expenseData);
         setAmt('');
         setDate('');
         setTitle('');
