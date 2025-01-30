@@ -8,6 +8,7 @@ export default function NewExpense(props){
             id: Math.random().toString()
         };
 
+        // lifting the state up to the common ancestor for either use by other child or store there
         props.onAddExpense(expenseData);
     };
 
