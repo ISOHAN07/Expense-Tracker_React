@@ -46,11 +46,12 @@ export default function ExpenseForm(props){
 
         const expenseData = {
             title: enteredTitle,
-            amt: enteredAmt,
+            amount: enteredAmt,
             date: new Date(enteredDate)
         };
 
         props.onSaveExpense(expenseData);
+        // console.log(expenseData);
         setAmt('');
         setDate('');
         setTitle('');
