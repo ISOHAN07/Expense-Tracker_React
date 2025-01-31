@@ -5,7 +5,7 @@ function Card(props) {
   
   return <div className={classes}>{props.children}</div>;
 
-// console.log(props.className)
+// console.log(props.children);
 }
 
 export default Card;
